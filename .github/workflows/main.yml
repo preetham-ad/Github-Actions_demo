@@ -10,5 +10,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Run a one-line script
-      run: echo "Hello, world!"
+    - name: Create a new directory
+      run: mkdir -p my_new_directory
+
+    - name: Write a message to a file
+      run: echo "This is a message from GitHub Actions" > my_new_directory/message.txt
+
+    - name: List directory contents
+      run: ls -la my_new_directory
+
